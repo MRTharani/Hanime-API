@@ -5,3 +5,4 @@ TgCrypto
 vcsi
 swibots
 yt_dlp 
+hanimetv
