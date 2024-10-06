@@ -48,7 +48,8 @@ async def main():
 
     for title, url in links:
         downloads = [ download["Name"] for download in find_documents(db, collection_name)] 
-        if title not in downloads:
+        url_downloads = [ download["Raw_Url"] for download in find_documents(db, collection_name)] 
+        if title not in downloads and url not in url_downloads :
             output_file = f'{title}.mp4'
             output_thumb = f'{title}.png'
             download_video(url, output_file)
